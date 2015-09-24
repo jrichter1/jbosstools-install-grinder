@@ -80,4 +80,4 @@ if (fileExtension.equals("zip")) {
 }
 
 // mark eclipse executable
-new AntBuilder().chmod(dir:new File(".").getAbsolutePath() + File.separator + "eclipse", perm:'+x', includes:"eclipse, eclipse.exe");
+new AntBuilder().chmod(dir:new File(".").getAbsolutePath() + File.separator + (osLabel.contains("mac") ? "Eclipse.app/Contents/MacOS" : "eclipse"), perm:'+x', includes:"eclipse, eclipse.exe");
